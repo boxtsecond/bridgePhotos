@@ -1,0 +1,12 @@
+{
+  "DB": {
+    "MongoDB": {
+      "host": "47.89.49.58:1008,47.90.14.228:1008,47.89.50.253:1008",
+      "dbName":"pictureAir",
+      "user": "pw",
+      "pass": "pw#Mongo@3456"
+    }
+  },
+  "photosPath": "/Users/xueting-bo/Downloads",
+  "intervalTime": 5000
+}

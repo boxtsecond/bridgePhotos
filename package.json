@@ -1,0 +1,17 @@
+{
+  "name": "bridge_photos",
+  "version": "1.0.0",
+  "description": "bridge photos from old system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "boxt",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "chokidar": "^1.6.1",
+    "gm": "^1.23.0",
+    "mongoose": "^4.7.6"
+  }
+}
