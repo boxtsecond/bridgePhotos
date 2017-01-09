@@ -3,6 +3,6 @@
  */
 
 function filterPhoto() {
-    
+
 }
 
