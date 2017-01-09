@@ -11,6 +11,7 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "chokidar": "^1.6.1",
+    "crypto": "0.0.3",
     "gm": "^1.23.0",
     "mongoose": "^4.7.6"
   }

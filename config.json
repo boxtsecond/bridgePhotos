@@ -7,6 +7,37 @@
       "pass": "pw#Mongo@3456"
     }
   },
-  "photosPath": "/Users/xueting-bo/Downloads",
-  "intervalTime": 5000
+  "photosPath": "/Users/xueting-bo/Downloads/",
+  "intervalTime": 5000,
+  "thumbnails": [
+    {
+      "width": {"size": 1024, "name": "x1024"},
+      "suffix": "",
+      "saveFolder": "preview",
+      "type": "preview"
+    },
+    {
+      "width": {"size": 640, "name": "x512"},
+      "suffix": "",
+      "saveFolder": "thumbnail\/512",
+      "type": ""
+    },
+    {
+      "width": {"size": 240, "name": "x128"},
+      "suffix": "",
+      "saveFolder": "thumbnail\/240",
+      "type": ""
+    }
+  ],
+  "folderPrefix": {
+    "sourcePath": "D:\\Ftp",
+    "prioritysourcePath": "D:\\prioritysource",
+    "orderPath": "\\\\172.16.164.33\\shdr\\website\\Orders",
+    "originalPath": "\\\\172.16.164.33\\shdr\\website\\backup",
+    "rawPath": "\\\\172.16.164.33\\shdr\\website\\raw",
+    "savePath": "\\\\172.16.164.33\\shdr\\website\\photos",
+    "assetsPath": "\\\\172.16.164.33\\shdr\\website\\assets\\preset",
+    "thumbnailFolder": "\\\\172.16.164.33\\shdr\\website\\photos",
+    "previewFolder": "\\\\172.16.164.33\\shdr\\website\\photos\\preview"
+  }
 }
