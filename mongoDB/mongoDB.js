@@ -8,13 +8,13 @@ mongoose.Promise=Promise;
 Promise.promisifyAll(mongoose);
 var configData=require('../config.json').DB.MongoDB;
 var opts = {
-    "server":
-    {"native_parser":true,"poolSize":5,"auto_reconnect": true,"socketOptions":{"keepAlive":1},"reconnectTries":30,"haInterval":1000 },
-    "db":{"native_parser":true,"strategy": "ping","readPreference":"primaryPreferred","bufferMaxEntries":5},
-    "replset":
-    {"rs_name":"pictureWorks","readPreference":"primaryPreferred","strategy":"ping","poolSize":5,"connectWithNoPrimary":true,"haInterval":1000
-    },
-    user: configData.user, pass: configData.pass
+    // "server":
+    // {"native_parser":true,"poolSize":5,"auto_reconnect": true,"socketOptions":{"keepAlive":1},"reconnectTries":30,"haInterval":1000 },
+    // "db":{"native_parser":true,"strategy": "ping","readPreference":"primaryPreferred","bufferMaxEntries":5},
+    // "replset":
+    // {"rs_name":"pictureWorks","readPreference":"primaryPreferred","strategy":"ping","poolSize":5,"connectWithNoPrimary":true,"haInterval":1000
+    // },
+    // user: configData.user, pass: configData.pass
 };
 var connectStr="mongodb://"+configData.host+"/"+configData.dbName;
 

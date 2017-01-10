@@ -17,8 +17,8 @@ var config={
     photoCode: {type: String, index: true},   //照片code
     shootOn: {type: Date, index: true},  //拍摄时间
     extractOn: {type: Date, index: true},    //提取时间
-    presetName:{type: String,  index: true,default:"thumbnail"},//模版名称
-    presetId: {type: String, index: true}, //模版ID
+    //presetName:{type: String,  index: true,default:"thumbnail"},//模版名称
+    //presetId: {type: String, index: true}, //模版ID
     mobileEditActive:{type: Boolean, default: true,index: true}, //已经加模板手机端不能编辑
     //pp或ep的信息
     customerIds: [
@@ -64,7 +64,7 @@ var config={
             lastEditTime: Date //评论时间
         }
     ],
-    albumId: {type: String, index: true}, //相册Id
+    //albumId: {type: String, index: true}, //相册Id
     tagBy: [String], //相片包含的人员
     originalInfo: { //原图信息
         originalName: {type: String, required: true, index: true}, //原图名称
@@ -76,18 +76,18 @@ var config={
     editHistorys: [],//edit 编辑的历史记录 originalInfo,thumbnail
     thumbnailType: [], //缩略图类型
     thumbnail: {}, //缩略图信息{x1024:{path:路径, width:宽, height:高， url:url},x512:{},x128:{},fileSize}
-    GPS: { //GPS信息
-        ImageUniqueID: String,
-        GPSInfo: String,
-        GPSLatitudeRef: String,
-        GPSLatitude: String,
-        GPSLongitudeRef: String,
-        GPSLongitude: String,
-        GPSAltitudeRef: String,
-        GPSAltitude: String,
-        GPSTimeStamp: String,
-        GPSDateStamp: String
-    },
+    // GPS: { //GPS信息
+    //     ImageUniqueID: String,
+    //     GPSInfo: String,
+    //     GPSLatitudeRef: String,
+    //     GPSLatitude: String,
+    //     GPSLongitudeRef: String,
+    //     GPSLongitude: String,
+    //     GPSAltitudeRef: String,
+    //     GPSAltitude: String,
+    //     GPSTimeStamp: String,
+    //     GPSDateStamp: String
+    // },
     locationId: {type: String, index: true}, //拍摄点Id
     parentId: {type: String, index: true}, //原始图片Id
     disabled: {type: Boolean, default: false}, //图片是否有效
@@ -98,26 +98,26 @@ var config={
     targetPoint: String, // 拍摄照片后送达的地点信息
     allowDownload:{type:Boolean,default:true},//是否允许下载
     //engine信息
-    engineInfo:{
-        chroma:{type: Boolean, default: false, index: true},
-        width:{type: Number, required: true}, //宽
-        height: {type: Number, required: true}, //高
-        Orientation:{type:String,default:'-1'},
-        rawPath:{type: String,required: true, index: true},
-        rawUrl:{type: String,required: true, index: true},
-        imageJson:{type: String,required: true},
-        imageJsonUrl:{type: String,required: true},
-        originalPath:{type: String,required: true},
-        originalFileSize:{type: Number,default: 1},
-        originalUrl:{type: String,required: true},
-        ticketNum:{type: String},
-        ticketPrefix:{type: String},
-        deleted:{type: Boolean, default: false},
-        rawthumbnail: {},//raw 文件夹
-        originalthumbnail: {}// original backup 文件夹
-    },//照片引擎信息
+    // engineInfo:{
+    //     chroma:{type: Boolean, default: false, index: true},
+    //     width:{type: Number, required: true}, //宽
+    //     height: {type: Number, required: true}, //高
+    //     Orientation:{type:String,default:'-1'},
+    //     rawPath:{type: String,required: true, index: true},
+    //     rawUrl:{type: String,required: true, index: true},
+    //     imageJson:{type: String,required: true},
+    //     imageJsonUrl:{type: String,required: true},
+    //     originalPath:{type: String,required: true},
+    //     originalFileSize:{type: Number,default: 1},
+    //     originalUrl:{type: String,required: true},
+    //     ticketNum:{type: String},
+    //     ticketPrefix:{type: String},
+    //     deleted:{type: Boolean, default: false},
+    //     rawthumbnail: {},//raw 文件夹
+    //     originalthumbnail: {}// original backup 文件夹
+    // },//照片引擎信息
     tokenBy:{type: String,index: true}, //摄影师
-    photoSource:{type: String, default:'engine'} ,//照片来源
+    photoSource:{type: String, default:'oldSystem'} ,//照片来源
     // faces:{
     //     "image":[],
     //     "faces":[

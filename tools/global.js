@@ -45,4 +45,5 @@ global.uuid = require('uuid');
 global.jstypeof=require('../tools/jstypeof.js');
 global.util=require('../tools/util.js');
 global.Promise=require('bluebird');
+global.objectid=require('objectid');
 

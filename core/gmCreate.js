@@ -15,16 +15,15 @@ function createAllThumbnail(photoPath) {
                 if((photosServerPath.charAt(photosServerPath.length-1)=="\\")==true||(photosServerPath.charAt(photosServerPath.length-1)=="/")==true){
                     photosServerPath=photosServerPath.toString().substring(0,photosServerPath.length-1);
                 }
-                var thPhotoPath = path.dirname(photoPath);
                 if (thumbnails && thumbnails.length > 0) {
                     return Promise.each(thumbnails, function (photoSize) {
+                        var createPath = path.join(config.folderPrefix.savePath, photoSize.saveFolder, path.basename(photoPath));
                         return Promise.resolve()
                             .then(function () {
-                                return createFolderFromPath(thPhotoPath, photoSize.saveFolder);
+                                return createFolderFromPath(createPath);
                             })
                             .then(function () {
                                 if (photoSize.width && photoSize.width.size) {
-                                    var createPath = path.join(thPhotoPath, photoSize.saveFolder, path.basename(photoPath));
                                     return gm(photoPath).resize(photoSize.width.size).writeAsync(createPath)
                                         .then(function () {
                                             console.log(photoPath + ' create ' + photoSize.width.size + ' thumbnails success');
@@ -60,20 +59,37 @@ function isImage(filepath){
 }
 
 //通过路径创建文件夹
-function createFolderFromPath(existPath, newPath){
-    var pathArray = newPath.split('/');
-    var folderPath = path.normalize(existPath + '/');
-    for(var i in pathArray){
-        folderPath = path.normalize(folderPath + '/' + pathArray[i]);
-        if(!fs.existsSync(folderPath)){
-            fs.mkdirSync(folderPath);
+function createFolderFromPath(dataPath){
+    dataPath=dataPath.substr(0,dataPath.lastIndexOf('/'))
+    if(dataPath.lastIndexOf('/')>0) {
+        var DataArray =dataPath.split('/');
+        var path=''
+        for(var item in DataArray)
+        {
+            path+=DataArray[item]+'/';
+            if (!fs.existsSync(path))
+                fs.mkdirSync(path);
         }
     }
 }
 
+function getSize(filePath) {
+    var info = {width: 0, height: 0};
+    return Promise.resolve()
+        .then(function () {
+            return gm(filePath).sizeAsync()
+        })
+        .then(function (size) {
+            info.width = size.width;
+            info.height = size.height;
+            return info;
+        })
+}
+
 module.exports = {
     createThumbnail: createAllThumbnail,
-    isImage: isImage
+    isImage: isImage,
+    getSize: getSize
 }
 
 // "thumbnail" : {
