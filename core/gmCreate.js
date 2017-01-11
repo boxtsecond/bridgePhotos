@@ -5,7 +5,7 @@
 var gm = require('gm').subClass({imageMagick: true});
 Promise.promisifyAll(gm.prototype);
 
-function createAllThumbnail(photoPath) {
+function createAllThumbnail(photoPath, savePath) {
     var pathInfo = {};
     return Promise.resolve()
         .then(function () {
@@ -17,7 +17,7 @@ function createAllThumbnail(photoPath) {
                 }
                 if (thumbnails && thumbnails.length > 0) {
                     return Promise.each(thumbnails, function (photoSize) {
-                        var createPath = path.join(config.folderPrefix.savePath, photoSize.saveFolder, path.basename(photoPath));
+                        var createPath = path.join(savePath, photoSize.saveFolder, path.basename(photoPath));
                         return Promise.resolve()
                             .then(function () {
                                 return createFolderFromPath(createPath);

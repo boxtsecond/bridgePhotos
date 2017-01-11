@@ -31,15 +31,21 @@
   ],
   "folderPrefix": {
     "sourcePath": "/Users/xueting-bo/Downloads/",
+    "storePhotosPath": "/Users/xueting-bo/Downloads/test",
     "prioritysourcePath": "D:\\prioritysource",
     "orderPath": "\\\\172.16.164.33\\shdr\\website\\Orders",
     "originalPath": "\\\\172.16.164.33\\shdr\\website\\backup",
     "rawPath": "\\\\172.16.164.33\\shdr\\website\\raw",
     "savePath": "/Users/xueting-bo/Boxt/testPhotos",
+    "storePhotosSavePath": "/Users/xueting-bo/Boxt/testPhotos",
     "assetsPath": "\\\\172.16.164.33\\shdr\\website\\assets\\preset",
     "thumbnailFolder": "\\\\172.16.164.33\\shdr\\website\\photos",
     "previewFolder": "\\\\172.16.164.33\\shdr\\website\\photos\\preview"
   },
   "appServerIP": "192.168.8.108/viewing",
-  "storageServerIP": "192.168.8.108"
+  "storageServerIP": "192.168.8.108",
+  "siteId": "SC",
+  "siteTerminalCode": "A",
+  "storeLevels": 1,
+  "storeSiteId": "BPSG"
 }

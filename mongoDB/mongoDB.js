@@ -14,7 +14,7 @@ var opts = {
     // "replset":
     // {"rs_name":"pictureWorks","readPreference":"primaryPreferred","strategy":"ping","poolSize":5,"connectWithNoPrimary":true,"haInterval":1000
     // },
-    // user: configData.user, pass: configData.pass
+    user: configData.user, pass: configData.pass
 };
 var connectStr="mongodb://"+configData.host+"/"+configData.dbName;
 
