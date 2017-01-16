@@ -116,7 +116,7 @@ function filterStorePhoto(photoPath, photoName, size, thumbnail, stat, levels, s
         path:photoPath,
         width: size.width,
         height:size.height,
-        url:util.enUrl(url.format(photoPath.substring(path.join(config.folderPrefix.storePhotosSavePath, '..', '..').toString().length + 1)))
+        url:util.enUrl(url.format(photoPath.substring(path.join(config.folderPrefix.savePath, '..', '..').toString().length + 1)))
     };
 }
 

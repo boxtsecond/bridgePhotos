@@ -112,5 +112,5 @@ function createStorePhotos(photoPath) {
         })
 }
 
-//console.log(path.join(config.folderPrefix.savePath, '..', '..'))
-//console.log(util.deUrl('94e81118e48cea90e4cbfbfae5e433997a9fed607a0b65adc60f8dff8a7d358d2f840a6852f5da7451db96d644cc4e4c8b94872843794fcdfdd9e96fbbc80695'));
+// console.log(path.join(config.folderPrefix.savePath, '..'))
+// console.log(util.deUrl('94e81118e48cea90e4cbfbfae5e433997a9fed607a0b65adc60f8dff8a7d358d2f840a6852f5da7451db96d644cc4e4c8b94872843794fcdfdd9e96fbbc80695'));
