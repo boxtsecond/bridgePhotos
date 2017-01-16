@@ -36,7 +36,7 @@
     "originalPath": "\\\\172.16.164.33\\shdr\\website\\backup",
     "rawPath": "\\\\172.16.164.33\\shdr\\website\\raw",
     "savePath": "/data/website/photos/oldSysPhotos",
-    "storePhotosSavePath": "/data/website/photos/BPSG/storePhotos",
+    "storePhotosSavePath": "/data/website/photos/storePhotos",
     "assetsPath": "\\\\172.16.164.33\\shdr\\website\\assets\\preset",
     "thumbnailFolder": "\\\\172.16.164.33\\shdr\\website\\photos",
     "previewFolder": "\\\\172.16.164.33\\shdr\\website\\photos\\preview"
