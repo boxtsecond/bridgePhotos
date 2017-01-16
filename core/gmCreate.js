@@ -11,7 +11,7 @@ function createAllThumbnail(photoPath, savePath) {
         .then(function () {
             if(isImage(photoPath)) {
                 var thumbnails = config.thumbnails;
-                var photosServerPath = path.join(config.folderPrefix.savePath, '..');
+                var photosServerPath = path.join(config.folderPrefix.savePath, '../..');
                 if((photosServerPath.charAt(photosServerPath.length-1)=="\\")==true||(photosServerPath.charAt(photosServerPath.length-1)=="/")==true){
                     photosServerPath=photosServerPath.toString().substring(0,photosServerPath.length-1);
                 }
